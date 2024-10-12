@@ -1,10 +1,5 @@
 ## InvoisChain
  
-### InvoisChain Contract Verified
-https://sepolia-blockscout.lisk.com/address/0x7066989818c88cD1e533d22519c381c6e21Ed487#code
-
-### InvoisChain Contract Address
-0x7066989818c88cD1e533d22519c381c6e21Ed487
 
 ## Table of Contents
 
@@ -16,7 +11,7 @@ https://sepolia-blockscout.lisk.com/address/0x7066989818c88cD1e533d22519c381c6e2
 
 ## Description
 
-InvoiceChain is a decentralized platform that facilitates seamless invoice creation and management. Users can easily itemize goods or services, set payment terms, and display the total amount in cryptocurrencies. Our platform is designed to eliminate trust issues between businesses and individuals by leveraging the power of blockchain decentralization, security, and transparency.
+InvoisChain is a decentralized platform that facilitates seamless invoice creation and management. Users can easily itemize goods or services, set payment terms, and display the total amount in cryptocurrencies. Our platform is designed to eliminate trust issues between businesses and individuals by leveraging the power of blockchain decentralization, security, and transparency.
 
 ## Features
 
@@ -37,11 +32,11 @@ We are building a decentralized invoicing system with the goal of solving trust 
 - Solidity
 - Next.js
 - Wagmi
-- Lisk-sepolia
+- Base-testnet
 
 ## Smart Contract
 
-Our smart contract is built on the Ethereum blockchain and deployed on Lisk. Leveraging the power of smart contracts, this platform ensures trust, transparency, and accountability by recording all invoice data on-chain.
+Our smart contract is built on the Ethereum blockchain and deployed on Base. Leveraging the power of smart contracts, this platform ensures trust, transparency, and accountability by recording all invoice data on-chain.
 
 ## Business Model
 
