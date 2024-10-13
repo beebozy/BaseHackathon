@@ -4,7 +4,7 @@ import { useReadContract } from 'wagmi';
 import { Contract_ABI } from "../contract/contractAbi";
 import { ethers } from 'ethers';
 
-const contactAddress = '0x7066989818c88cD1e533d22519c381c6e21Ed487';
+const contactAddress = '0xD3Bf935b00647732888D785C2674965fd803F8b9';
 
 export default function InvoiceList() {
   const { data: invoiceList, isLoading, error } = useReadContract({

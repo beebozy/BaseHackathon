@@ -6,10 +6,10 @@ import React, { useState } from 'react'
 import { config } from "./../../../next.config.mjs"
 import { useReadContract, useAccount, useWriteContract, useConnect } from 'wagmi';
 import { Contract_ABI } from "../contract/contractAbi";
-import { arbitrumSepolia, liskSepolia } from 'viem/chains';
+import { arbitrumSepolia, liskSepolia,base, baseSepolia } from 'viem/chains';
 import { injected } from 'wagmi/connectors';
 
-const contactAddress = '0x7066989818c88cD1e533d22519c381c6e21Ed487';
+const contactAddress = '0xD3Bf935b00647732888D785C2674965fd803F8b9';
 export default function CreateCustomer({ setIsActive }: { setIsActive: (isActive: string) => void }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,7 +22,7 @@ export default function CreateCustomer({ setIsActive }: { setIsActive: (isActive
   const createCustomerFunction = async () => {
     try {
       if (address) {
-        await connectAsync({chainId: liskSepolia.id, connector:injected()})
+        await connectAsync({chainId: baseSepolia.id, connector:injected()})
       }
         const result = writeContractAsync({
           address: contactAddress,

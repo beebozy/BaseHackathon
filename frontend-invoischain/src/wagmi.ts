@@ -3,6 +3,8 @@ import {
   sepolia,
   liskSepolia,
   lisk,
+  baseSepolia,
+
 } from 'wagmi/chains';
 
 export const config = getDefaultConfig({
@@ -13,6 +15,7 @@ export const config = getDefaultConfig({
     sepolia,
     lisk,
     liskSepolia,
+    baseSepolia,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
   ],
   ssr: true,

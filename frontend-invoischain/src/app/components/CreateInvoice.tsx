@@ -5,12 +5,12 @@ import React, {useState, useEffect}  from 'react'
 import { nanoid } from 'nanoid';
 import { useReadContract, useAccount, useWriteContract, useConnect } from 'wagmi';
 import {Contract_ABI } from "../contract/contractAbi";
-import { liskSepolia, lisk } from 'viem/chains';
+import { liskSepolia, lisk,base, baseSepolia } from 'viem/chains';
 import { injected } from 'wagmi/connectors';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
-const contactAddress = '0x7066989818c88cD1e533d22519c381c6e21Ed487';
+const contactAddress = '0xD3Bf935b00647732888D785C2674965fd803F8b9';
 export default function CreateInvoice() {
   const [name, setName] = useState("");
   const [id, setId] = useState("");
@@ -36,7 +36,7 @@ export default function CreateInvoice() {
   const createInvoiceFunction = async () => {
     try {
       if (address) {
-        await connectAsync({chainId:liskSepolia.id, connector:injected()})
+        await connectAsync({chainId:baseSepolia.id, connector:injected()})
       }
       const result =  writeContractAsync({
         address: contactAddress,
@@ -103,9 +103,11 @@ useEffect(() => {
                         autoComplete="customer-name"
                         className="block w-full bg-[#F0F2F5] rounded-md border-0 p-[8.1px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" onChange={(e) => setName(e.target.value)} value={name}
                       >
+                        <option>Builder</option>
                         <option>AbdulKabir</option>
                         <option>Roheemah</option>
                         <option>Bashir</option>
+                        
                       </select>
                     </div>
                   </div>
@@ -157,9 +159,11 @@ useEffect(() => {
                         autoComplete="payment-method"
                         className="block w-full bg-[#F0F2F5] rounded-md border-0 p-[8.1px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" onChange={(e) => setPayMeth(e.target.value)} value={payMeth}
                       >
+                        <option>Base</option>
                         <option>LiskSepolia</option>
                         <option>Lisk</option>
-                        <option>Base</option>
+                        
+                        <option>BaseSepolia</option>
                       </select>
                     </div>
                   </div>
@@ -174,10 +178,13 @@ useEffect(() => {
                         autoComplete="recieve-payment-in"
                         className="block w-full bg-[#F0F2F5] rounded-md border-0 p-[8.1px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" onChange={(e) => setPayType(e.target.value)} value={payType}
                       >
+                       
+                        <option>BASE</option>
                         <option>LSK</option>
                         <option>ETH</option>
                         <option>USDC</option>
                         <option>USD</option>
+
                       </select>
                     </div>
                   </div>
